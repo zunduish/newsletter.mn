@@ -1,32 +1,182 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.ReactModal__Overlay {
-  background-color: rgba(0, 0, 0, 0.7) !important;
-}
-.ReactModal__Content {
-  /* display: block; */
-}
-:root {
-  /* --foreground-rgb: 0, 0, 0; */
-  /* --background-start-rgb: 214, 219, 220; */
-  /* --background-end-rgb: 255, 255, 255; */
+/* @import url("./Literata/Literata-VariableFont_opsz\,wght.ttf"); */
+
+@font-face {
+  font-family: "Literata"; /*a name to be used later*/
+  src: url("./Literata/Literata-VariableFont_opsz\,wght.ttf"); /*URL to font*/
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --foreground-rgb: 255, 255, 255; */
-    /* --background-start-rgb: 0, 0, 0; */
-    /* --background-end-rgb: 0, 0, 0; */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* vvnees doosh font xereglej bga */
+.container {
+  width: 100%;
+  padding: 0px 10px 0px 10px;
+}
+.display1 {
+  font-family: Literata, sans-serif;
+  font-size: 28px;
+  letter-spacing: 0px;
+  font-weight: 500;
+}
+.metadata {
+  /* font-family: Okta Neue, sans-serif; */
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.tag {
+  /* font-family: Okta Neue, sans-serif; */
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+}
+.subheading {
+  /* font-family: Okta Neue, sans-serif; */
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.ontslox_dugaar_title {
+  font-family: Literata, sans-serif;
+  font-size: 16px;
+  line-height: 23.76px;
+  font-weight: 700;
+}
+.caption {
+  /* font-family: Okta Neue, sans-serif; */
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.ui-lower {
+  /* font-family: Okta Neue, sans-serif; */
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+/* sm response */
+@media (min-width: 480px) {
+  .container_custom {
+    /* width: 100%; */
+    padding: 0px 4px 0px 4px;
+  }
+  .display1 {
+    font-family: Literata, sans-serif;
+    font-size: 28px;
+    letter-spacing: 0px;
+    font-weight: 500;
+  }
+  .metadata {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .tag {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+  }
+  .subheading {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
   }
 }
 
-body {
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+/* md response */
+@media (min-width: 769px) {
+  .container_custom {
+    padding: 0px 24px 0px 24px;
+  }
+  .display1 {
+    font-family: Literata, sans-serif;
+    font-size: 48px;
+    letter-spacing: 0px;
+    font-weight: 500;
+  }
+  .metadata {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  .tag {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 800;
+  }
+  .subheading {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  .ontslox_dugaar_title {
+    font-family: Literata, sans-serif;
+    font-size: 16px;
+    line-height: 23.76px;
+    font-weight: 700;
+  }
+  .caption {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+
+/* lg response */
+@media (min-width: 1280px) {
+  .display1 {
+    font-family: Literata, sans-serif;
+    font-size: 64px;
+    letter-spacing: 0px;
+    font-weight: 500;
+  }
+  .metadata {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  .tag {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 800;
+  }
+  .subheading {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  .ontslox_dugaar_title {
+    font-family: Literata, sans-serif;
+    font-size: 20px;
+    line-height: 29.7px;
+    font-weight: 700;
+  }
+  .caption {
+    /* font-family: Okta Neue, sans-serif; */
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container_custom {
+    max-width: 1440px;
+  }
 }

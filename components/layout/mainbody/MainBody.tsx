@@ -1,3 +1,12 @@
+import DifinitionContainer from "../../components/definition/containers/DefinitionContiner";
+import FeaturedContainer from "../../components/featured/containers/FeaturedContainer";
+import CategoredNewsContainer from "../../components/categorednews/containers/CategoredNewsContainer";
 export default function MainBody() {
-  return <div className="w-full min-h-[800px] mt-[60px] m-auto">main body</div>;
+  return (
+    <div className="container_custom lg:container mx-auto">
+      <DifinitionContainer />
+      <FeaturedContainer />
+      <CategoredNewsContainer />
+    </div>
+  );
 }
