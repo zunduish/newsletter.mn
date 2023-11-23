@@ -14,6 +14,9 @@ module.exports = {
     },
     colors: {
       "default-yellow": "#FFC20E",
+      "linear-pink": "#FF2EDC",
+      "linear-blue": "#2E4BFF",
+      "linear-sky": "#2EFFEC",
       orange: {
         50: "#ffe4d7",
         100: "#fdcab0",
@@ -54,6 +57,9 @@ module.exports = {
     },
     textColor: {
       "default-yellow": "#FFC20E",
+      "linear-pink": "#FF2EDC",
+      "linear-blue": "#2E4BFF",
+      "linear-sky": "#2EFFEC",
       orange: {
         50: "#ffe4d7",
         100: "#fdcab0",
