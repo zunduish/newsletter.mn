@@ -8,13 +8,13 @@ export default function Header() {
           <Image
             width={23}
             height={26}
-            src="./images/sys_images/unread_logo.svg"
+            src="/images/sys_images/unread_logo.svg"
             alt=""
           />
           <Image
             width={23}
             height={26}
-            src="./images/sys_images/header_sm.svg"
+            src="/images/sys_images/header_sm.svg"
             alt=""
             className="ml-[10px] w-[250px]"
           />

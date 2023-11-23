@@ -30,21 +30,21 @@ export default function Footer() {
           {/* fb insta twitter */}
           <div className="w-full flex items-center">
             <Image
-              src="./images/sys_images/fb_logo.svg"
+              src="/images/sys_images/fb_logo.svg"
               width={22}
               height={22}
               alt=""
               className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
             />
             <Image
-              src="./images/sys_images/insta_logo.svg"
+              src="/images/sys_images/insta_logo.svg"
               width={22}
               height={22}
               alt=""
               className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
             />
             <Image
-              src="./images/sys_images/twitter_logo.svg"
+              src="/images/sys_images/twitter_logo.svg"
               width={22}
               height={22}
               alt=""
@@ -55,7 +55,7 @@ export default function Footer() {
                 UNREAD.TODAY{" "}
               </span>
               <Image
-                src="./images/sys_images/right_arrow.svg"
+                src="/images/sys_images/right_arrow.svg"
                 width={22}
                 height={22}
                 alt=""
