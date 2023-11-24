@@ -58,17 +58,16 @@ export default function CategoredNews(props: Props) {
               <p className="lg:text-[14px] md:text-[14px] sm:text-[12px] font-bold text-orange-500 uppercase left-[10px] bottom-[5px] lg:bottom-[20px] absolute">
                 бүх дугаар
               </p>
-              <button
-                onClick={alertZ}
-                className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
-              >
-                <Image
-                  src="./images/sys_images/add_button.svg"
-                  width={40}
-                  height={40}
-                  alt=""
-                  className=" rounded-full  w-[32px] h-[32px] md:w-[40px] md:h-[40px] lg:w-[40px] lg:h-[40px]"
-                />
+              <button className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute">
+                <Link href="/newsletter/hello">
+                  <Image
+                    src="./images/sys_images/add_button.svg"
+                    width={40}
+                    height={40}
+                    alt=""
+                    className=" rounded-full  w-[32px] h-[32px] md:w-[40px] md:h-[40px] lg:w-[40px] lg:h-[40px]"
+                  />
+                </Link>
               </button>
             </div>
           </div>

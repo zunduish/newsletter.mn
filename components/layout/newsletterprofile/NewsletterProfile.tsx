@@ -1,7 +1,7 @@
 import TheFutureTextContainer from "../../components/profile/thefuturetext/containers/TheFutureTextContainer";
 import NewContainer from "../../components/profile/new/containers/NewContainer";
 import ListContainer from "../../components/profile/lists/containers/ListContainer";
-import RegisterContainer from "../../components/profile/register/containers/RegisterContainer";
+import ProfileContainer from "../../components/profile/profile/containers/ProfileContainer";
 
 export default function NewsletterProfile() {
   return (
@@ -21,7 +21,7 @@ export default function NewsletterProfile() {
 
         {/* THIRTH DIV */}
         <div className="col-span-12 md:col-span-6 lg:col-span-4 my-[24px]">
-          <RegisterContainer />
+          <ProfileContainer />
         </div>
       </div>
     </div>

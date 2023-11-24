@@ -8,9 +8,14 @@
   src: url("./Literata/Literata-VariableFont_opsz\,wght.ttf"); /*URL to font*/
 }
 
-/* ------------------------------------------------------- */
-/* ------------------------------------------------------- */
-/* ------------------------------------------------------- */
+.one .two {
+  margin-top: 50px;
+  color: rebeccapurple;
+  font-size: 48px;
+  box-shadow: 0px 0px 5px red;
+  border-radius: 45px;
+}
+
 /* vvnees doosh font xereglej bga */
 .container {
   width: 100%;

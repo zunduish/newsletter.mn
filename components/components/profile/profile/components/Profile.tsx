@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
+import RegisterContainer from "../../../register/container/RegisterContainer";
 
-export default function Register() {
+export default function Profile() {
   // const { register, handleSubmit } = useForm();
   // const onSubmit = (data: any) => console.log(data);
   return (
@@ -28,7 +29,11 @@ export default function Register() {
         vel nunc id. Consequat etiam pellentesque ante nulla at convallis. Nulla
         malesuada mi faucibus parturient neque arcu nibh consequat porta.
       </p>
+
       <div className="w-full border-b-[1px] border-neutral-100 pb-[24px] mb-[24px]">
+        <RegisterContainer />
+      </div>
+      {/* <div className="w-full border-b-[1px] border-neutral-100 pb-[24px] mb-[24px]">
         <form>
           <div className="w-full border border-neutral-100 rounded-lg flex p-[5px]  mt-[15px]">
             <Image
@@ -64,7 +69,7 @@ export default function Register() {
             />
           </div>
         </form>
-      </div>
+      </div> */}
 
       {/* profile */}
       <div className="border border-neutral-100 rounded-xl w-full p-[24px] mt-[20px]">
