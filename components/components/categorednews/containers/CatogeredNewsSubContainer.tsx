@@ -16,26 +16,7 @@ export default function CategoredNewsSubContainer(props: Props) {
     client: getErxesApolloClient(),
     fetchPolicy: "network-only",
   });
-
   console.log("data?.knowledgeBaseTopics >>> ", data?.knowledgeBaseTopics);
-
-  // const { loading, error, data } = useQuery(gql(GET_GGG), {
-  //   variables: { page: 1, perPage: 1000, brandId: null },
-  //   client: getErxesApolloClient(),
-  //   fetchPolicy: "network-only",
-  // });
-  // console.log("data >>> ", data);
-
-  const [sendDataaa, setSendData1] = useState(data?.knowledgeBaseTopics);
-  // const [sendDataaa, setSendData1] = useState();
-
-  // PdpPxWxEmgSkkloiGO21F
-  // fI9cdcylfif736BdD_QSt
-  // 5Dl50RWZuwU_rlfOAWzsf
-  // KWN4uJ4SHINX5R-HE1xRg
-
-  // data={data?.knowledgeBaseTopics}
-  //   console.log("sendDataaa >>> ", sendDataaa);
   return (
     <div>
       {data?.knowledgeBaseTopics.map((element: any, index: number) => (
