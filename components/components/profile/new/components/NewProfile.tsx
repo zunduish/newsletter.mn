@@ -1,16 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 type Props = {
   list_data: any;
 };
 export default function NewProfile(props: Props) {
   const { list_data } = props;
-  // console.log(list_data);
+  // console.log("NewProfile >>> ",list_data);
   return (
     <Link
-      href={"/newsletter-detail/" + list_data[0]._id}
+      href={"/newsletter-detail/" + list_data[0]?._id}
       className="text-orange-500 ui1_lower"
     >
       <div className="w-full px-[10px]">
@@ -41,15 +40,15 @@ export default function NewProfile(props: Props) {
           </div>
           <div className=" bg-orange-500 text-neutral-0 h-[100%] rounded-b-xl md:rounded-none  md:rounded-r-xl lg:rounded-r-xl xl:rounded-r-xl p-[24px]">
             <p className="text-[10px] font-black text-orange-200">
-              {list_data[0].createdDate} &#x2022; #12
+              {list_data[0]?.createdDate} &#x2022; #12
             </p>
             <p className="text-[20px] md:text-[24px] leading-[29px] md:leading-[35px] font-bold mt-2">
-              {list_data[0].title}
+              {list_data[0]?.title}
             </p>
             <div
               className="text-gray-soft mt-3 line-clamp-6"
               dangerouslySetInnerHTML={{
-                __html: list_data[0].content,
+                __html: list_data[0]?.content,
               }}
             />
             {/* <p className="text-[14px] md:text-[16px] font-normal leading-[18px] md:leading-[20px] mt-2">

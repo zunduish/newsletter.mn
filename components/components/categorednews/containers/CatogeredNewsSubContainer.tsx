@@ -3,10 +3,7 @@ import CategoredNews from "../components/CategoredNews";
 import CategoredNComingSoon from "../components/CategoredNComingSoon";
 import CategoredNCooperation from "../components/CategoredNCooperation";
 import { gql, useQuery } from "@apollo/client";
-import {
-  GET_KNOWLEDGE_BASE_TOPICS,
-  GET_KNOWLEDGE_BASE_TOPICS_M,
-} from "../graphql/queries";
+import { GET_KNOWLEDGE_BASE_TOPICS_M } from "../graphql/queries";
 import { getErxesApolloClient } from "@/lib/initApollo";
 type Props = {
   brandId: string;

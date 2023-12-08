@@ -1,7 +1,6 @@
 import Script from 'next/script';
 
 const SubscribeForm = () => {
-  //   if (!brandId || !formId) return null;
   return (
     <>
       <Script
