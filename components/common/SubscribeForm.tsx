@@ -8,7 +8,7 @@ const SubscribeForm = ({
   formId: string;
 }) => {
   //   if (!brandId || !formId) return null;
-  console.log(brandId, formId, "sfargreshgtshrst");
+  //   console.log(brandId, formId, "sfargreshgtshrst");
   return (
     <>
       <Script

@@ -142,6 +142,9 @@
 
 /* lg response */
 @media (min-width: 1280px) {
+  .newsletter_top .newcontainer {
+    display: block !important;
+  }
   .display1 {
     font-family: Literata, sans-serif;
     font-size: 64px;
@@ -183,5 +186,8 @@
 @media (min-width: 1440px) {
   .container_custom {
     max-width: 1440px;
+  }
+  .newsletter_top .newcontainer {
+    display: block !important;
   }
 }

@@ -5,9 +5,9 @@ import Script from "next/script";
 export default function Register({ integration }: any) {
   const formId = integration?.form?.code;
   const brandId = integration?.brand?.code;
-  console.log(brandId, formId, "intttttt");
+  // console.log(brandId, formId, "intttttt");
   return (
-    <div className="w-full">
+    <div className="w-full get_newsletter_form">
       {<SubscribeForm formId={formId} brandId={brandId} />}
       {
         <div

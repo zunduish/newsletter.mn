@@ -1,5 +1,9 @@
 import React from "react";
 import TheFutureText from "../components/TheFutureText";
-export default function TheFutureTextContiner() {
+type Props = {
+  id: any;
+};
+export default function TheFutureTextContiner(props: Props) {
+  const { id } = props;
   return <TheFutureText />;
 }

@@ -8,9 +8,7 @@ type Props = {
 };
 export default function Profile(props: Props) {
   const { data, art_data } = props;
-  console.log("art_data >>> ", art_data);
-  // const { register, handleSubmit } = useForm();
-  // const onSubmit = (data: any) => console.log(data);
+
   return (
     <div className="w-full py-[24px] px-[10px]">
       <div className="w-full">
