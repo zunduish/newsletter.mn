@@ -1,14 +1,6 @@
-import Script from "next/script";
+import Script from 'next/script';
 
-const SubscribeForm = ({
-  brandId,
-  formId,
-}: {
-  brandId: string;
-  formId: string;
-}) => {
-  //   if (!brandId || !formId) return null;
-  //   console.log(brandId, formId, "sfargreshgtshrst");
+const SubscribeForm = () => {
   return (
     <>
       <Script
