@@ -4,8 +4,10 @@ import { useRouter } from 'next/router';
 import { GET_FORM_DETAIL, GET_INTEGRATIONS } from '../../profile/profile/graphql/queries';
 import { getErxesApolloClient } from '@/lib/initApollo';
 import { FORM_SUBMIT_MUTATION } from '../../profile/profile/graphql/mutations';
+import { useState } from 'react';
 
 export default function RegisterContainer() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const router = useRouter();
   const { data } = useQuery(gql(GET_INTEGRATIONS), {
     variables: {
@@ -31,6 +33,9 @@ export default function RegisterContainer() {
 
   const [formSubmit, { data: formSubmitData }] = useMutation(gql(FORM_SUBMIT_MUTATION), {
     client: getErxesApolloClient(),
+    onCompleted: () => {
+      setFormSubmitted(true);
+    },
   });
 
   const getFormValues = (name: string, email: string) => {
@@ -56,6 +61,7 @@ export default function RegisterContainer() {
     getFormValues,
     integration,
     formDetail,
+    formSubmitted,
   };
 
   return <Register {...props} />;
