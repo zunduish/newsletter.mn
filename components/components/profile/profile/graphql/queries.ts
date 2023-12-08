@@ -1,6 +1,6 @@
 // knowledgeBaseArticles;
 
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql } from '@apollo/client';
 export const GET_KNOWLEDGE_BASE_ARTICLES = `
 query KnowledgeBaseArticles($categoryIds: [String]) {
   knowledgeBaseArticles(categoryIds: $categoryIds) {
@@ -41,11 +41,31 @@ query KnowledgeBaseTopicDetail($id: String!) {
 export const GET_INTEGRATIONS = `
 query Integrations($brandId: String, $kind: String, $perPage: Int, $page: Int) {
   integrations(brandId: $brandId, kind: $kind, perPage: $perPage, page: $page) {
+    _id
     form {
       code
     }
+    formId
     brand {
       code
+    }
+  }
+}
+`;
+
+export const GET_FORM_DETAIL = `
+query FormDetail($id: String!) {
+  formDetail(_id: $id) {
+    _id
+    description
+    type
+    title
+    fields {
+      field
+      _id
+      code
+      text
+      type
     }
   }
 }
