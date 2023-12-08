@@ -15,7 +15,7 @@ export default function CardsLarge(props: Props) {
         {/* ------------------------------------------------------------------------------------------------------------------ */}
         {/* 111 */}
         {fdata?.map((element: any, index: number) => (
-          <div className="w-full flex">
+          <div className="w-full flex" key={index}>
             <div className="w-[73px] h-[40px] lg:w-[168px] lg:h-[94px] md:w-[86px] md:h-[48px] rounded-lg mr-[24px]">
               <Image
                 src="./images/test.svg"
@@ -45,7 +45,7 @@ export default function CardsLarge(props: Props) {
                   }}
                 />
                 <Link
-                  href={"/newsletter-detail/" + element._id}
+                  href={"/newsletter-detail/" + element.topicId}
                   className="text-orange-500 ui1_lower"
                 >
                   {" "}

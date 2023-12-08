@@ -15,7 +15,10 @@ export default function CategoredNCooperation(props: Props) {
       <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-[24px] pb-[50px] border-b-[1px] border-neutral-100">
         {/* ************************************************************************************************************ */}
         {listData?.map((element: any, index: number) => (
-          <div className="border rounded-lg border-neutral-100  flex lg:grid p-[20px] lg:p-0 ">
+          <div
+            className="border rounded-lg border-neutral-100  flex lg:grid p-[20px] lg:p-0 "
+            key={index}
+          >
             <div className="w-[60px] h-[60px] lg:w-full lg:h-[320px] sm:rounded-lg md:rounded-lg lg:sm:rounded-none lg:rounded-t-lg">
               <div className="w-[60px] h-[60px] lg:w-full lg:h-[100%] rounded-none sm:rounded-lg md:rounded-lg lg:rounded-t-lg relative ">
                 <div className="lg:block hidden absolute w-[150px] py-[5px] px-[8px] m-[16px] rounded-[16px] bg-neutral-0/60  text-center">

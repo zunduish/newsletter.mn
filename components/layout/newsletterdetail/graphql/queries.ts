@@ -1,23 +1,22 @@
 // knowledgeBaseArticles;
 
 import { useQuery, gql } from "@apollo/client";
-export const GET_KNOWLEDGE_BASE_ARTICLES = `
-query KnowledgeBaseArticles($categoryIds: [String]) {
-  knowledgeBaseArticles(categoryIds: $categoryIds) {
-    _id
+export const GET_KNOWLEDGE_BASE_ARTICLE_DETAIL = `
+query KnowledgeBaseArticleDetail($id: String!) {
+  knowledgeBaseArticleDetail(_id: $id) {
     title
-    createdDate
-    content
-    categoryId
-    attachments {
-      url
-      name
-    }
+    status
     image {
       url
       name
     }
-    topicId
+    content
+    _id
+    createdBy
+    attachments {
+      url
+      name
+    }
   }
 }
 `;

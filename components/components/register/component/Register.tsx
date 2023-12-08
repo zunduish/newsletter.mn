@@ -1,8 +1,32 @@
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Register() {
   return (
     <div className="w-full">
+      {/* <Script
+        id="form"
+        dangerouslySetInnerHTML={{
+          __html: `
+      window.erxesSettings = {
+        forms: [{
+          brand_id: ${"zRLmyi"},
+          form_id: ${"ZVBRdQ"}
+        }],
+      };
+      
+    (function() {
+      var script = document.createElement('script');
+      script.src = "https://unreadnewsletter.app.erxes.io/widgets/build/formWidget.bundle.js";
+      script.async = true;
+    
+      var entry = document.getElementsByTagName('script')[0];
+      entry.parentNode.insertBefore(script, entry);
+    })();
+    `,
+        }}
+      /> */}
+
       <form>
         <div className="w-full border border-neutral-100 rounded-lg flex p-[5px]  mt-[15px]">
           <Image
