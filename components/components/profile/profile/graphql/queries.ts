@@ -22,19 +22,6 @@ query KnowledgeBaseArticles($categoryIds: [String]) {
       formId
       brandId
     }
-    createdUser {
-      _id
-      details {
-        lastName
-        fullName
-        firstName
-        avatar
-        middleName
-        position
-        shortName
-        description
-      }
-    }
   }
 }
 `;
@@ -47,6 +34,19 @@ query KnowledgeBaseTopicDetail($id: String!) {
     createdBy
     description
     backgroundImage
+  }
+}
+`;
+
+export const GET_INTEGRATIONS = `
+query Integrations($brandId: String, $kind: String, $perPage: Int, $page: Int) {
+  integrations(brandId: $brandId, kind: $kind, perPage: $perPage, page: $page) {
+    form {
+      code
+    }
+    brand {
+      code
+    }
   }
 }
 `;

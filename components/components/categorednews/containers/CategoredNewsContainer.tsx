@@ -4,15 +4,12 @@ import CategoredNComingSoon from "../components/CategoredNComingSoon";
 import CategoredNCooperation from "../components/CategoredNCooperation";
 
 import { gql, useQuery } from "@apollo/client";
-import {
-  GET_KNOWLEDGE_BASE_TOPICS,
-  GET_KNOWLEDGE_BASE_TOPICS_M,
-} from "../graphql/queries";
+import { GET_KNOWLEDGE_BASE_TOPICS_M } from "../graphql/queries";
 import { getErxesApolloClient } from "@/lib/initApollo";
 
 export default function CategoredNewsContainer() {
   const { loading, error, data } = useQuery(gql(GET_KNOWLEDGE_BASE_TOPICS_M), {
-    variables: { page: 1, perPage: 1000, brandId: null },
+    variables: { page: 1, perPage: 1000 },
     client: getErxesApolloClient(),
     fetchPolicy: "network-only",
   });

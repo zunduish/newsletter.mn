@@ -13,7 +13,7 @@ export default function Lists(props: Props) {
         list_data.map(
           (element: any, index: number) =>
             index >= 1 && (
-              <Link href={"/newsletter-detail/id"} key={index}>
+              <Link href={"/newsletter-detail/" + element._id} key={index}>
                 <div className="w-full grid grid-cols-1 gap-0 lg:flex border-b-[1px] border-neutral-100 pb-[24px] mb-[24px] px-[10px]">
                   <div className="w-[50%] sx:h-[100px] sm:h-[100px] md:h-[100px] lg:w-[168px] ">
                     <Image

@@ -11,7 +11,7 @@ export default function NewsLetterDetail() {
   return (
     <main className="w-full">
       <Header />
-      <NewsLetterDetails nlid={router.query.id} />
+      <NewsLetterDetails id={router.query.id} />
       <Footer />
     </main>
   );

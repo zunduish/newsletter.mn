@@ -12,12 +12,13 @@ type Props = {
 
 export default function NewsletterProfile(props: Props) {
   const { cat_id } = props;
+  // console.log(cat_id, "car");
   const { loading, error, data } = useQuery(gql(GET_KNOWLEDGE_BASE_ARTICLES), {
-    variables: { categoryIds: cat_id },
+    variables: { categoryIds: [cat_id] },
     client: getErxesApolloClient(),
     fetchPolicy: "network-only",
   });
-  console.log("NewsletterProfile >>> ", data?.knowledgeBaseArticles);
+  // console.log("NewsletterProfile >>> ", data?.knowledgeBaseArticles);
   return (
     <div className="container_custom lg:container mx-auto py-[24px] mb-[24px] ">
       <TheFutureTextContainer />
@@ -35,7 +36,10 @@ export default function NewsletterProfile(props: Props) {
 
         {/* THIRTH DIV */}
         <div className="col-span-12 md:col-span-6 lg:col-span-4 my-[24px]">
-          <ProfileContainer />
+          <ProfileContainer
+            id={data?.knowledgeBaseArticles[0]?.topicId}
+            art_data={data?.knowledgeBaseArticles[0]?.createdUser?.details}
+          />
         </div>
       </div>
     </div>

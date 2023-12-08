@@ -45,10 +45,9 @@ export default function CardsLarge(props: Props) {
                   }}
                 />
                 <Link
-                  href={"/newsletter-detail/" + element.topicId}
+                  href={"/newsletter-detail/" + element._id}
                   className="text-orange-500 ui1_lower"
                 >
-                  {" "}
                   цааш унших
                 </Link>
               </p>

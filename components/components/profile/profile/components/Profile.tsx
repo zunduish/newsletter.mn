@@ -2,8 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import RegisterContainer from "../../../register/container/RegisterContainer";
-
-export default function Profile() {
+type Props = {
+  data: any;
+  art_data: any;
+};
+export default function Profile(props: Props) {
+  const { data, art_data } = props;
+  console.log("art_data >>> ", art_data);
   // const { register, handleSubmit } = useForm();
   // const onSubmit = (data: any) => console.log(data);
   return (
@@ -17,17 +22,9 @@ export default function Profile() {
           className="w-[76px] h-[76px] sm:m-auto md:m-0 lg:m-0"
         />
       </div>
-      <p className="text-[16px] leading-[23px] font-bold mt-4">The Future</p>
+      <p className="text-[16px] leading-[23px] font-bold mt-4">{data?.title}</p>
       <p className="text-[12px] leading-[16px] font-normal text-neutral-500 mt-2">
-        Lorem ipsum dolor sit amet consectetur. Ridiculus tristique risus neque
-        pellentesque felis euismod bibendum. Mattis sed facilisi lorem arcu sit
-        vel nunc id. Consequat etiam pellentesque ante nulla at convallis. Nulla
-        malesuada mi faucibus parturient neque arcu nibh consequat porta.
-        <br />
-        Lorem ipsum dolor sit amet consectetur. Ridiculus tristique risus neque
-        pellentesque felis euismod bibendum. Mattis sed facilisi lorem arcu sit
-        vel nunc id. Consequat etiam pellentesque ante nulla at convallis. Nulla
-        malesuada mi faucibus parturient neque arcu nibh consequat porta.
+        {data?.description}
       </p>
 
       <div className="w-full border-b-[1px] border-neutral-100 pb-[24px] mb-[24px]">
@@ -84,10 +81,10 @@ export default function Profile() {
         </div>
         <div className="w-full">
           <p className="text-[16px] leading-[20px] font-bold  mt-3">
-            Ц.Мажигсүрэн
+            {art_data?.fullName}
           </p>
           <p className="text-[12px] leading-[16px] flex mt-2 text-neutral-400">
-            Content Writer <span>&nbsp; | &nbsp; </span>
+            {art_data?.position} <span>&nbsp; | &nbsp; </span>
             <span className="text-orange-500 font-bold"> Unread </span>
           </p>
         </div>

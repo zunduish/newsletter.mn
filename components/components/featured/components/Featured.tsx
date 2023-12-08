@@ -12,7 +12,7 @@ export default function Featured() {
     fetchPolicy: "network-only",
   });
 
-  console.log("data?.knowledgeBaseArticles >>> ", data?.knowledgeBaseArticles);
+  // console.log("data?.knowledgeBaseArticles >>> ", data?.knowledgeBaseArticles);
   return (
     <div className="w-full m-auto  py-[15px]">
       <p className="subheading text-orange-500 px-[24px] mb-[10px]">

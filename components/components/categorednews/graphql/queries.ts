@@ -21,38 +21,38 @@ import { useQuery, gql } from "@apollo/client";
 // }
 // `;
 
-export const GET_KNOWLEDGE_BASE_TOPICS = `
-query knowledgeBaseTopics($page: Int, $perPage: Int) {
-  knowledgeBaseTopics(page: $page, perPage: $perPage) {
-    _id
-    title
-    description
-    brand {
-      _id
-      name
-    }
-    categories {
-      _id
-      title
-      description
-      icon
-    }
-    color
-    backgroundImage
-    languageCode
-    createdBy
-    createdDate
-    modifiedBy
-    modifiedDate
-    notificationSegmentId
-    parentCategories {
-      title
-      description
-      icon
-    }
-  }
-}
-`;
+// export const GET_KNOWLEDGE_BASE_TOPICS = `
+// query knowledgeBaseTopics($page: Int, $perPage: Int) {
+//   knowledgeBaseTopics(page: $page, perPage: $perPage) {
+//     _id
+//     title
+//     description
+//     brand {
+//       _id
+//       name
+//     }
+//     categories {
+//       _id
+//       title
+//       description
+//       icon
+//     }
+//     color
+//     backgroundImage
+//     languageCode
+//     createdBy
+//     createdDate
+//     modifiedBy
+//     modifiedDate
+//     notificationSegmentId
+//     parentCategories {
+//       title
+//       description
+//       icon
+//     }
+//   }
+// }
+// `;
 
 export const IMAP_GET_INTEGRATION = `
 query imapGetIntegrations {
@@ -250,8 +250,8 @@ query TicketDetail($id: String!) {
 `;
 
 export const GET_KNOWLEDGE_BASE_TOPICS_M = `
-query KnowledgeBaseTopics($page: Int, $perPage: Int, $brandId: String) {
-  knowledgeBaseTopics(page: $page, perPage: $perPage, brandId: $brandId) {
+query KnowledgeBaseTopics($page: Int, $perPage: Int) {
+  knowledgeBaseTopics(page: $page, perPage: $perPage) {
     title
     description
     backgroundImage

@@ -8,23 +8,23 @@ import { gql, useQuery } from "@apollo/client";
 import { getErxesApolloClient } from "@/lib/initApollo";
 
 type Props = {
-  nlid: any;
+  id: any;
 };
 export default function NewsLetterDetail(props: Props) {
-  const { nlid } = props;
-  // console.log("NewsLetterDetail nlid > ", nlid);
+  const { id } = props;
+  console.log("NewsLetterDetail id > ", id);
   const { loading, error, data } = useQuery(
     gql(GET_KNOWLEDGE_BASE_ARTICLE_DETAIL),
     {
-      variables: { id: nlid },
+      variables: { id: id },
       client: getErxesApolloClient(),
       fetchPolicy: "network-only",
     }
   );
-  // console.log(
-  //   "data?.knowledgeBaseArticleDetail DETAIL >>> ",
-  //   data?.knowledgeBaseArticleDetail
-  // );
+  console.log(
+    "data?.knowledgeBaseArticleDetail DETAIL >>> ",
+    data?.knowledgeBaseArticleDetail
+  );
   return (
     // <div className="container_custom lg:container mx-auto py-[24px] mb-[24px] ">
     <div className="sx:w-full md:w-[722px] lg:w-[744px] mx-auto px-[15px] py-[24px] lg:py-[10px] mb-[24px] ">
@@ -58,7 +58,7 @@ export default function NewsLetterDetail(props: Props) {
         </div>
         <div className="w-full pb-[20px] border-b-[1px] border-neutral-100">
           <p className="text-[20px] leading-[30px] mdtext-[32px] md:leading-[47px] font-bold">
-            {data?.knowledgeBaseArticleDetail.title}
+            {data?.knowledgeBaseArticleDetail?.title}
           </p>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function NewsLetterDetail(props: Props) {
         <div
           className="text-gray-soft mt-3"
           dangerouslySetInnerHTML={{
-            __html: data?.knowledgeBaseArticleDetail.content,
+            __html: data?.knowledgeBaseArticleDetail?.content,
           }}
         />
       </div>
