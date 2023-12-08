@@ -7,11 +7,11 @@ import { getErxesApolloClient } from "@/lib/initApollo";
 
 export default function NewsLetter() {
   const router = useRouter();
-  console.log("router.query.id >>> ", router.query.id);
+  // console.log("router.query.id >>> ", router.query.id);
   return (
     <main className="w-full">
       <Header />
-      <NewsletterProfile />
+      <NewsletterProfile cat_id={router.query.id} />
       <Footer />
     </main>
   );

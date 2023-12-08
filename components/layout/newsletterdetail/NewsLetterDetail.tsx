@@ -2,7 +2,26 @@ import React from "react";
 import Image from "next/image";
 import RegisterContainer from "../../components/register/container/RegisterContainer";
 import RegisterOrangeContainer from "../../components/registerorange/container/RegisterOrangeContainer";
-export default function NewsLetterDetail() {
+
+import { GET_KNOWLEDGE_BASE_ARTICLES } from "./graphql/queries";
+import { gql, useQuery } from "@apollo/client";
+import { getErxesApolloClient } from "@/lib/initApollo";
+
+type Props = {
+  nlid: any;
+};
+export default function NewsLetterDetail(props: Props) {
+  const { nlid } = props;
+  // console.log("NewsLetterDetail nlid > ", nlid);
+  const { loading, error, data } = useQuery(gql(GET_KNOWLEDGE_BASE_ARTICLES), {
+    variables: { categoryIds: null },
+    client: getErxesApolloClient(),
+    fetchPolicy: "network-only",
+  });
+  // console.log(
+  //   "data?.knowledgeBaseArticles DETAIL >>> ",
+  //   data?.knowledgeBaseArticles
+  // );
   return (
     // <div className="container_custom lg:container mx-auto py-[24px] mb-[24px] ">
     <div className="sx:w-full md:w-[722px] lg:w-[744px] mx-auto px-[15px] py-[24px] lg:py-[10px] mb-[24px] ">

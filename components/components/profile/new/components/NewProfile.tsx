@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
-
-export default function NewProfile() {
+type Props = {
+  list_data: any;
+};
+export default function NewProfile(props: Props) {
+  const { list_data } = props;
+  // console.log(list_data);
   return (
     <div className="w-full px-[10px]">
       <p className="text-[10px] text-orange-500 flex items font-bold absolute mt-[25px]">
@@ -31,19 +35,24 @@ export default function NewProfile() {
         </div>
         <div className=" bg-orange-500 text-neutral-0 h-[100%] rounded-b-xl md:rounded-none  md:rounded-r-xl lg:rounded-r-xl xl:rounded-r-xl p-[24px]">
           <p className="text-[10px] font-black text-orange-200">
-            2023/10/24 &#x2022; #12
+            {list_data[0].createdDate} &#x2022; #12
           </p>
           <p className="text-[20px] md:text-[24px] leading-[29px] md:leading-[35px] font-bold mt-2">
-            Password, Session, Cookie, Token, JWT, SSO, OAuth - Authentication
-            Explained - Part 2
+            {list_data[0].title}
           </p>
-          <p className="text-[14px] md:text-[16px] font-normal leading-[18px] md:leading-[20px] mt-2">
+          <div
+            className="text-gray-soft mt-3 line-clamp-6"
+            dangerouslySetInnerHTML={{
+              __html: list_data[0].content,
+            }}
+          />
+          {/* <p className="text-[14px] md:text-[16px] font-normal leading-[18px] md:leading-[20px] mt-2">
             Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
             facilisis. Arcu diam condimentum diam libero ac aliquam lorem
             scelerisque. Lorem ipsum dolor sit amet consectetur. Quis non nibh
             arcu arcu facilisis. Arcu diam condimentum diam libero ac aliquam
             lorem scelerisque diam libero ac
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

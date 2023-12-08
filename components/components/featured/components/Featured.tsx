@@ -1,22 +1,25 @@
 import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import CardsLarge from "./CardsLarge";
 
-export default function Definition() {
-  const [seeMore, setSeemore] = useState(false);
+import { GET_KNOWLEDGE_BASE_ARTICLES } from "../graphql/queries";
+import { gql, useQuery } from "@apollo/client";
+import { getErxesApolloClient } from "@/lib/initApollo";
 
-  const handleSeeMore = () => setSeemore(!seeMore);
+export default function Featured() {
+  const { loading, error, data } = useQuery(gql(GET_KNOWLEDGE_BASE_ARTICLES), {
+    variables: { categoryIds: null },
+    client: getErxesApolloClient(),
+    fetchPolicy: "network-only",
+  });
 
-  const [widthDetect, setWidthDetect] = useState(100);
-  const widthDetectF = () => setWidthDetect(window.screen.availWidth);
+  // console.log("data?.knowledgeBaseArticles >>> ", data?.knowledgeBaseArticles);
   return (
     <div className="w-full m-auto  py-[15px]">
       <p className="subheading text-orange-500 px-[24px] mb-[10px]">
         Онцлох дугаарууд
       </p>
       {/* end cards duudna */}
-      <CardsLarge />
+      <CardsLarge fdata={data?.knowledgeBaseArticles} />
     </div>
   );
 }
