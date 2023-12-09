@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import * as dayjs from "dayjs";
 type Props = {
   list_data: any;
 };
 export default function NewProfile(props: Props) {
+  const dayjs = require("dayjs");
   const { list_data } = props;
-  // console.log("NewProfile >>> ",list_data);
+
   return (
     <Link
       href={"/newsletter-detail/" + list_data[0]?._id}
@@ -40,7 +42,8 @@ export default function NewProfile(props: Props) {
           </div>
           <div className=" bg-orange-500 text-neutral-0 h-[100%] rounded-b-xl md:rounded-none  md:rounded-r-xl lg:rounded-r-xl xl:rounded-r-xl p-[24px]">
             <p className="text-[10px] font-black text-orange-200">
-              {list_data[0]?.createdDate} &#x2022; #12
+              {dayjs(list_data[0]?.createdDate).format("YYYY-MM-DD")} &#x2022;
+              #1
             </p>
             <p className="text-[20px] md:text-[24px] leading-[29px] md:leading-[35px] font-bold mt-2">
               {list_data[0]?.title}
@@ -51,13 +54,6 @@ export default function NewProfile(props: Props) {
                 __html: list_data[0]?.content,
               }}
             />
-            {/* <p className="text-[14px] md:text-[16px] font-normal leading-[18px] md:leading-[20px] mt-2">
-            Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
-            facilisis. Arcu diam condimentum diam libero ac aliquam lorem
-            scelerisque. Lorem ipsum dolor sit amet consectetur. Quis non nibh
-            arcu arcu facilisis. Arcu diam condimentum diam libero ac aliquam
-            lorem scelerisque diam libero ac
-          </p> */}
           </div>
         </div>
       </div>

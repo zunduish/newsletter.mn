@@ -12,6 +12,7 @@
     "@apollo/client": "^3.8.5",
     "@tailwindcss/line-clamp": "^0.4.4",
     "antd": "^5.11.0",
+    "dayjs": "^1.11.10",
     "graphql": "^16.8.1",
     "next": "13.5.4",
     "react": "^18",

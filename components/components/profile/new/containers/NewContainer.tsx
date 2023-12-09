@@ -1,5 +1,6 @@
 import React from "react";
 import NewProfile from "../components/NewProfile";
+
 type Props = {
   list_data: any;
 };
