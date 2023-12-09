@@ -2,16 +2,29 @@ import Header from "../../components/layout/header/Header";
 import NewsLetterDetails from "../../components/layout/newsletterdetail/NewsLetterDetail";
 import Footer from "../../components/layout/footer/Footer";
 import { useRouter } from "next/router";
+import { GET_KNOWLEDGE_BASE_ARTICLE_DETAIL } from "./graphql/queries";
 import { gql, useQuery } from "@apollo/client";
 import { getErxesApolloClient } from "@/lib/initApollo";
+import Loader from "@/components/common/Loader";
 
 export default function NewsLetterDetail() {
   const router = useRouter();
-  // console.log("router.query.id >>> ", router.query.id);
+  const field_query = useQuery(gql(GET_KNOWLEDGE_BASE_ARTICLE_DETAIL), {
+    variables: { id: router.query.id },
+    client: getErxesApolloClient(),
+    fetchPolicy: "network-only",
+  });
+
   return (
     <main className="w-full">
       <Header />
-      <NewsLetterDetails id={router.query.id} />
+      {field_query.loading ? (
+        <Loader type="NewsLetterDetail" />
+      ) : (
+        <NewsLetterDetails
+          data={field_query.data?.knowledgeBaseArticleDetail}
+        />
+      )}
       <Footer />
     </main>
   );
