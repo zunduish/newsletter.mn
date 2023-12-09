@@ -2,12 +2,21 @@ import React from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import RegisterContainer from "../../../register/container/RegisterContainer";
+import { GET_USER_DETAIL } from "../graphql/queries";
+import { gql, useQuery } from "@apollo/client";
+import { getErxesApolloClient } from "@/lib/initApollo";
 type Props = {
-  data: any;
-  art_data: any;
+  cat_data: any;
+  id: string;
+  uid: string;
 };
 export default function Profile(props: Props) {
-  const { data, art_data } = props;
+  const { cat_data, id, uid } = props;
+  const { loading, error, data } = useQuery(gql(GET_USER_DETAIL), {
+    variables: { id: uid },
+    client: getErxesApolloClient(),
+    fetchPolicy: "network-only",
+  });
 
   return (
     <div className="w-full py-[24px] px-[10px]">
@@ -20,9 +29,11 @@ export default function Profile(props: Props) {
           className="w-[76px] h-[76px] sm:m-auto md:m-0 lg:m-0"
         />
       </div>
-      <p className="text-[16px] leading-[23px] font-bold mt-4">{data?.title}</p>
+      <p className="text-[16px] leading-[23px] font-bold mt-4">
+        {cat_data?.title}
+      </p>
       <p className="text-[12px] leading-[16px] font-normal text-neutral-500 mt-2">
-        {data?.description}
+        {cat_data?.description}
       </p>
 
       <div className="w-full border-b-[1px] border-neutral-100 pb-[24px] mb-[24px]">
@@ -79,11 +90,14 @@ export default function Profile(props: Props) {
         </div>
         <div className="w-full">
           <p className="text-[16px] leading-[20px] font-bold  mt-3">
-            {art_data?.fullName}
+            {data?.userDetail?.details?.firstName}
           </p>
           <p className="text-[12px] leading-[16px] flex mt-2 text-neutral-400">
-            {art_data?.position} <span>&nbsp; | &nbsp; </span>
-            <span className="text-orange-500 font-bold"> Unread </span>
+            {data?.userDetail?.details?.position} <span>&nbsp; | &nbsp; </span>
+            <span className="text-orange-500 font-bold">
+              {" "}
+              {data?.userDetail?.details?.description}
+            </span>
           </p>
         </div>
         <div className="w-full flex mt-[15px]">

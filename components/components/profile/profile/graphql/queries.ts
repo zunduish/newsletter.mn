@@ -1,6 +1,6 @@
 // knowledgeBaseArticles;
 
-import { useQuery, gql } from '@apollo/client';
+import { useQuery, gql } from "@apollo/client";
 export const GET_KNOWLEDGE_BASE_ARTICLES = `
 query KnowledgeBaseArticles($categoryIds: [String]) {
   knowledgeBaseArticles(categoryIds: $categoryIds) {
@@ -66,6 +66,23 @@ query FormDetail($id: String!) {
       code
       text
       type
+    }
+  }
+}
+`;
+export const GET_USER_DETAIL = `
+query UserDetail($id: String) {
+  userDetail(_id: $id) {
+    username
+    _id
+    details {
+      avatar
+      position
+      shortName
+      middleName
+      fullName
+      firstName
+      description
     }
   }
 }

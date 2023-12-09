@@ -29,8 +29,8 @@ export default function NewsletterProfile(props: Props) {
         {/* THIRTH DIV */}
         <div className="col-span-12 md:col-span-6 lg:col-span-4 my-[24px]">
           <ProfileContainer
-            id={data?.topicId}
-            art_data={data[0]?.createdUser?.details}
+            id={data[0]?.topicId}
+            uid={data[0].createdUser._id}
           />
         </div>
       </div>
