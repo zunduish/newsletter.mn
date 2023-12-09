@@ -10,7 +10,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      Literata: ["Literata", "sans-serif"],
+      Literata: ["Literata", "cursive"],
+      OktaNeue: ["OktaNeue", "cursive"],
     },
     colors: {
       "default-yellow": "#FFC20E",

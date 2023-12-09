@@ -37,7 +37,7 @@ export default function NewsLetterDetail(props: Props) {
           </p>
         </div>
         <div className="w-full pb-[20px] border-b-[1px] border-neutral-100">
-          <p className="text-[20px] leading-[30px] mdtext-[32px] md:leading-[47px] font-bold">
+          <p className="text-[20px] leading-[30px] mdtext-[32px] md:leading-[47px] font-OktaNeue">
             {data?.title}
           </p>
         </div>
