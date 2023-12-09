@@ -16,8 +16,6 @@ export default function CategoredNewsContainer() {
   });
   return (
     <div>
-      {/* <Loader type="CatogeredCard" /> */}
-
       {field_query.loading ? (
         <Loader type="CatogeredCard" />
       ) : (
@@ -27,10 +25,6 @@ export default function CategoredNewsContainer() {
         />
       )}
 
-      {/* <CategoredNews title="Үйл явдал" listData={sendData} />
-      <CategoredNews title="Well-being" listData={sendData} />
-      <CategoredNews title="Сонирхол" listData={sendData} />
-      <CategoredNews title="Entertainment" listData={sendData} /> */}
       {field_query.loading ? (
         <Loader type="CatogeredCard" />
       ) : (

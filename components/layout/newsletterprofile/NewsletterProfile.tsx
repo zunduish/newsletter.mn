@@ -12,7 +12,7 @@ export default function NewsletterProfile(props: Props) {
 
   return (
     <div className="container_custom lg:container mx-auto py-[24px] mb-[24px] ">
-      <TheFutureTextContainer id={data?.topicId} />
+      <TheFutureTextContainer id={data[0]?.topicId} />
       <div className="block lg:hidden">
         <NewContainer list_data={data} />
       </div>
@@ -23,7 +23,7 @@ export default function NewsletterProfile(props: Props) {
               <NewContainer list_data={data} />
             </div>
           </div>
-          <ListContainer list_data={data} />
+          {/* <ListContainer list_data={data} /> */}
         </div>
 
         {/* THIRTH DIV */}

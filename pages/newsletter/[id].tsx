@@ -15,6 +15,7 @@ export default function NewsLetter() {
     client: getErxesApolloClient(),
     fetchPolicy: "network-only",
   });
+
   return (
     <main className="w-full">
       <Header />

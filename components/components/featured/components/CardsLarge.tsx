@@ -35,7 +35,7 @@ export default function CardsLarge(props: Props) {
               <p className="ontslox_dugaar_title text-neutral-900 mb-1 line-clamp-1">
                 {element.title}
               </p>
-              <p className="text-neutral-600 caption mb-1">
+              <div className="text-neutral-600 caption mb-1">
                 <div
                   className="text-gray-soft mt-3 line-clamp-2 text-[16px]"
                   dangerouslySetInnerHTML={{
@@ -48,7 +48,7 @@ export default function CardsLarge(props: Props) {
                 >
                   цааш унших
                 </Link>
-              </p>
+              </div>
             </div>
           </div>
         ))}

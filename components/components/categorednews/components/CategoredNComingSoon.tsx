@@ -8,7 +8,6 @@ type Props = {
 
 export default function CategoredNComingSoon(props: Props) {
   const { title, listData } = props;
-  const alertZ = () => alert("Hi");
   return (
     <div className="w-full px-[24px] mt-[15px]">
       <p className="subheading mb-[24px]">{title}</p>
@@ -47,10 +46,7 @@ export default function CategoredNComingSoon(props: Props) {
               <p className="lg:text-[14px] md:text-[14px] sm:text-[12px] font-bold uppercase left-[10px] bottom-[5px] lg:bottom-[20px] absolute">
                 ТУН УДАХГҮЙ...
               </p>
-              <button
-                onClick={alertZ}
-                className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
-              >
+              <button className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute">
                 <Image
                   src="./images/sys_images/add_button.svg"
                   width={40}
@@ -96,10 +92,7 @@ export default function CategoredNComingSoon(props: Props) {
               <p className="lg:text-[14px] md:text-[14px] sm:text-[12px] font-bold uppercase left-[10px] bottom-[5px] lg:bottom-[20px] absolute">
                 ТУН УДАХГҮЙ...
               </p>
-              <button
-                onClick={alertZ}
-                className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
-              >
+              <button className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute">
                 <Image
                   src="./images/sys_images/add_button.svg"
                   width={40}
@@ -144,10 +137,7 @@ export default function CategoredNComingSoon(props: Props) {
               <p className="lg:text-[14px] md:text-[14px] sm:text-[12px] font-bold uppercase left-[10px] bottom-[5px] lg:bottom-[20px] absolute">
                 ТУН УДАХГҮЙ...
               </p>
-              <button
-                onClick={alertZ}
-                className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
-              >
+              <button className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute">
                 <Image
                   src="./images/sys_images/add_button.svg"
                   width={40}
@@ -192,10 +182,7 @@ export default function CategoredNComingSoon(props: Props) {
               <p className="lg:text-[14px] md:text-[14px] sm:text-[12px] font-bold uppercase left-[10px] bottom-[5px] lg:bottom-[20px] absolute">
                 ТУН УДАХГҮЙ...
               </p>
-              <button
-                onClick={alertZ}
-                className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
-              >
+              <button className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute">
                 <Image
                   src="./images/sys_images/add_button.svg"
                   width={40}
@@ -240,10 +227,7 @@ export default function CategoredNComingSoon(props: Props) {
               <p className="lg:text-[14px] md:text-[14px] sm:text-[12px] font-bold uppercase left-[10px] bottom-[5px] lg:bottom-[20px] absolute">
                 ТУН УДАХГҮЙ...
               </p>
-              <button
-                onClick={alertZ}
-                className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
-              >
+              <button className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute">
                 <Image
                   src="./images/sys_images/add_button.svg"
                   width={40}
@@ -288,10 +272,7 @@ export default function CategoredNComingSoon(props: Props) {
               <p className="lg:text-[14px] md:text-[14px] sm:text-[12px] font-bold uppercase left-[10px] bottom-[5px] lg:bottom-[20px] absolute">
                 ТУН УДАХГҮЙ...
               </p>
-              <button
-                onClick={alertZ}
-                className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
-              >
+              <button className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute">
                 <Image
                   src="./images/sys_images/add_button.svg"
                   width={40}
@@ -336,10 +317,7 @@ export default function CategoredNComingSoon(props: Props) {
               <p className="lg:text-[14px] md:text-[14px] sm:text-[12px] font-bold uppercase left-[10px] bottom-[5px] lg:bottom-[20px] absolute">
                 ТУН УДАХГҮЙ...
               </p>
-              <button
-                onClick={alertZ}
-                className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
-              >
+              <button className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute">
                 <Image
                   src="./images/sys_images/add_button.svg"
                   width={40}
