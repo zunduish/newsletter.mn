@@ -1,7 +1,8 @@
 import SubscribeForm from "@/components/common/SubscribeForm";
 import Image from "next/image";
 import Script from "next/script";
-import { useState } from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
 
 export default function Register({
   formSubmitted,
@@ -11,6 +12,13 @@ export default function Register({
   const fields = formDetail?.fields || [];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  const afterOpenModal = () => {};
+  const [modalArticlesOpen, setModalArticlesOpen] = React.useState(false);
+  const openModalArticles = () => {
+    setModalArticlesOpen(true);
+  };
+  const closeModalArticles = () => setModalArticlesOpen(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -60,6 +68,7 @@ export default function Register({
           </div>
           <div className="w-full flex items-center">
             <input
+              onClick={openModalArticles}
               type="submit"
               value={"Бүртгүүлэх"}
               className="min-w-[100px] bg-orange-500 cursor-pointer text-neutral-0 text-12px px-[16px] py-[4px] md:text-14px md:px-[20px] md:py-[8px] lg:text-16px lg:px-[24px] lg:py-[12px] rounded-lg mt-[12px] "
@@ -69,6 +78,43 @@ export default function Register({
       ) : (
         "submitted"
       )}
+
+      {/* ************************************************************************************************************ */}
+      <Modal
+        isOpen={modalArticlesOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModalArticles}
+        appElement={[]}
+        contentLabel="Example Modal"
+        className="w-[95%] md:w-[600px] lg:w-[600px] min-h-[200px] max-h-[90%] px-[10px] md:px-[50px] lg:px-[100px] bg-white py-[20px] md:py-[30px] lg:py-[50px] flex absolute left-[5%] right-[5%] md:left-[10%] md:right-[10%] lg:left-[15%] lg:right-[15%]  mt-[30px] mb-[30px] bg-neutral-0 rounded-2xl"
+      >
+        <div className="relative min-h-[150px] overflow-scroll overflow_scroll_container w-full ">
+          <div className="py-4 ">
+            <div className="w-full mb-3 py-1 grid justify-items-center text-center">
+              <Image
+                src={"./images/sys_images/success.svg"}
+                alt=""
+                width={50}
+                height={50}
+                className="rounded-lg w-[50%]"
+              />
+              <p className="text-xl  mt-[40px] text-[16px] md:text-[24px] lg:text-[28px] font-bold text-default-green">
+                Тавтай морил
+              </p>
+              <p className="text-[14px] md:text-[16px] lg:text-[16px]  mt-[10px]">
+                Мэдлэгийг тань цэнэглэх товхимол тан дээр очиход бэлэн боллоо,
+                баяр хүргэе!
+              </p>
+              <button
+                onClick={closeModalArticles}
+                className="text-[16px] border py-[5px] px-[15px] rounded-lg border-neutral-100 mt-[100px] font-semibold"
+              >
+                <span>Буцах</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 }
