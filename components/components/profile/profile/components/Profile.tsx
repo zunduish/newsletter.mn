@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { useForm } from "react-hook-form";
 import RegisterContainer from "../../../register/container/RegisterContainer";
 import { GET_USER_DETAIL } from "../graphql/queries";
 import { gql, useQuery } from "@apollo/client";
