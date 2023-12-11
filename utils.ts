@@ -15,4 +15,4 @@ export const getEnv = (name: string, defaultValue?: any) => {
 };
 
 export const ErxesImageUrl =
-  "https://speakup-admin.apu.mn/gateway/read-file?key=";
+  "https://unreadnewsletter.app.erxes.io/gateway/read-file?key=";

@@ -4,6 +4,8 @@ import RegisterContainer from "../../../register/container/RegisterContainer";
 import { GET_USER_DETAIL } from "../graphql/queries";
 import { gql, useQuery } from "@apollo/client";
 import { getErxesApolloClient } from "@/lib/initApollo";
+import { ErxesImageUrl } from "@/utils";
+
 type Props = {
   cat_data: any;
   id: string;
@@ -21,11 +23,16 @@ export default function Profile(props: Props) {
     <div className="w-full py-[24px] px-[10px]">
       <div className="w-full">
         <Image
-          src="/images/rocket.png"
+          src={
+            cat_data?.backgroundImage !== null
+              ? ErxesImageUrl + cat_data?.backgroundImage
+              : "../images/sys_images/default.svg"
+          }
+          // src="/images/rocket.png"
           width={76}
           height={76}
           alt=""
-          className="w-[76px] h-[76px] sm:m-auto md:m-0 lg:m-0"
+          className="w-[76px] h-[76px] sm:m-auto md:m-0 lg:m-0 rounded-lg"
         />
       </div>
       <p className="text-[16px] leading-[23px] font-bold mt-4">
@@ -80,11 +87,17 @@ export default function Profile(props: Props) {
       <div className="border border-neutral-100 rounded-xl w-full p-[24px] mt-[20px]">
         <div className="w-full">
           <Image
-            src="/images/avatar.png"
+            // {data?.userDetail?.details?.position}
+            src={
+              data?.userDetail?.details?.avatar !== null
+                ? ErxesImageUrl + data?.userDetail?.details?.avatar
+                : "../images/sys_images/default.svg"
+            }
+            // src="/images/avatar.png"
             width={82}
             height={82}
             alt=""
-            className="rounded-full sx:m-auto sm:m-auto md:m-0 lg:m-0"
+            className="w-[82px] h-[82px] rounded-full sx:m-auto sm:m-auto md:m-0 lg:m-0"
           />
         </div>
         <div className="w-full">
@@ -94,9 +107,9 @@ export default function Profile(props: Props) {
           <p className="text-[12px] leading-[16px] flex mt-2 text-neutral-400">
             {data?.userDetail?.details?.position} <span>&nbsp; | &nbsp; </span>
             <span className="text-orange-500 font-bold">
-              {" "}
               {data?.userDetail?.details?.description}
             </span>
+            {/* zzz */}
           </p>
         </div>
         <div className="w-full flex mt-[15px]">

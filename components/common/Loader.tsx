@@ -225,6 +225,52 @@ const NewsLetterList = () => {
     </div>
   );
 };
+const Footer = () => {
+  // home -> categored LOADER
+  return (
+    <div className="w-full mt-[50px] bg-neutral-100">
+      <div className="container_custom  lg:container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-0">
+        <div className=" lg:col-span-4 p-[24px]">
+          <div className="mt-3 w-[60%] h-[30px] bg-neutral-200 rounded-lg "></div>
+          <div className="mt-3 w-[40%] h-[20px] bg-neutral-200 rounded-lg "></div>
+          <div className="mt-3 w-[50%] h-[20px] bg-neutral-200 rounded-lg "></div>
+          <div className="mt-3 w-[30%] h-[20px] bg-neutral-200 rounded-lg "></div>
+        </div>
+
+        <div className=" lg:col-span-8 p-[24px]">
+          <div className="w-full  flex">
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+            <div className="mt-3 w-[20px] h-[20px] bg-neutral-200 rounded-full mr-3" />
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+            <div className="mt-3 w-[20px] h-[20px] bg-neutral-200 rounded-full mr-3" />
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+            <div className="mt-3 w-[20px] h-[20px] bg-neutral-200 rounded-full mr-3" />
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+            <div className="mt-3 w-[20px] h-[20px] bg-neutral-200 rounded-full mr-3" />
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+            <div className="mt-3 w-[20px] h-[20px] bg-neutral-200 rounded-full mr-3" />
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+          </div>
+          <div className="w-full  flex">
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+            <div className="mt-3 w-[20px] h-[20px] bg-neutral-200 rounded-full mr-3" />
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+            <div className="mt-3 w-[20px] h-[20px] bg-neutral-200 rounded-full mr-3" />
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+            <div className="mt-3 w-[20px] h-[20px] bg-neutral-200 rounded-full mr-3" />
+            <div className="mt-3 w-[100px] h-[20px] bg-neutral-200 rounded-lg mr-3" />
+          </div>
+          {/* fb insta twitter */}
+          <div className="w-full flex items-center mt-[20px]">
+            <div className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px] bg-neutral-100" />
+            <div className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px] bg-neutral-100" />
+            <div className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px] bg-neutral-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 const DefaultLoader = () => {
   // home -> categored DEFAULT LOADER
   return <div className="w-full h-[100px] bg-neutral-50 mt-[15px]"></div>;
@@ -239,6 +285,8 @@ const Loader = ({ type }: any) => {
       return <NewsLetterDetail></NewsLetterDetail>;
     case "NewsLetterList":
       return <NewsLetterList></NewsLetterList>;
+    case "Footer":
+      return <Footer></Footer>;
     default:
       return <DefaultLoader></DefaultLoader>;
   }

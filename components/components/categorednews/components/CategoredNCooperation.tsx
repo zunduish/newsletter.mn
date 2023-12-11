@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Modal from "react-modal";
+import { ErxesImageUrl } from "@/utils";
 
 type Props = {
   title: string;
@@ -32,7 +33,7 @@ export default function CategoredNCooperation(props: Props) {
                   </span>
                 </div>
                 <Image
-                  src="./images/card_pic1.svg"
+                  src={ErxesImageUrl + element.backgroundImage}
                   sizes="100vw"
                   style={{
                     objectFit: "cover",

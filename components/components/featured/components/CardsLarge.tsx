@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ErxesImageUrl } from "@/utils";
 
 type Props = {
   fdata: any;
@@ -16,12 +17,17 @@ export default function CardsLarge(props: Props) {
           <div className="w-full flex" key={index}>
             <div className="w-[73px] h-[40px] lg:w-[168px] lg:h-[94px] md:w-[86px] md:h-[48px] rounded-lg mr-[24px]">
               <Image
-                src="./images/test.svg"
+                src={
+                  element.image !== null
+                    ? ErxesImageUrl + element.image.url
+                    : "./images/sys_images/default.svg"
+                }
                 sizes="100vw"
                 style={{
                   objectFit: "cover",
                   width: "100%",
-                  height: "auto",
+                  maxHeight: 85,
+                  borderRadius: 10,
                 }}
                 width={100}
                 height={100}

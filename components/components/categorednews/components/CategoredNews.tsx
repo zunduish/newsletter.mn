@@ -62,7 +62,11 @@ export default function CategoredNews(props: Props) {
                   element.backgroundImage
                 } */}
                   <Image
-                    src={"https://apu-speakup.pages.dev/images/brochure.svg"}
+                    src={
+                      element.backgroundImage !== null
+                        ? ErxesImageUrl + element.backgroundImage
+                        : "./images/sys_images/default.svg"
+                    }
                     sizes="100vw"
                     style={{
                       objectFit: "cover",

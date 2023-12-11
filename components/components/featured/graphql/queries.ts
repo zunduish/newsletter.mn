@@ -14,7 +14,10 @@ query KnowledgeBaseArticles($categoryIds: [String]) {
     }
     image {
       url
+      type
+      size
       name
+      duration
     }
     topicId
   }

@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ErxesImageUrl } from "@/utils";
+
 type Props = {
   list_data: any;
 };
@@ -18,7 +20,11 @@ export default function Lists(props: Props) {
                 <div className="w-full grid grid-cols-1 gap-0 lg:flex border-b-[1px] border-neutral-100 pb-[24px] mb-[24px] px-[10px]">
                   <div className="w-[50%] sx:h-[100px] sm:h-[100px] md:h-[100px] lg:w-[168px] ">
                     <Image
-                      src="/images/sys_images/car.png"
+                      src={
+                        element.image !== null
+                          ? ErxesImageUrl + element.image.url
+                          : "../images/sys_images/default.svg"
+                      }
                       sizes="100vw"
                       style={{
                         objectFit: "cover",
