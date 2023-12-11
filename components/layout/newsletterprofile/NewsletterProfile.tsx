@@ -23,7 +23,7 @@ export default function NewsletterProfile(props: Props) {
               <NewContainer list_data={data} />
             </div>
           </div>
-          {/* <ListContainer list_data={data} /> */}
+          <ListContainer list_data={data} />
         </div>
 
         {/* THIRTH DIV */}

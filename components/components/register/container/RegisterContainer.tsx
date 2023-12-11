@@ -68,6 +68,7 @@ export default function RegisterContainer() {
     integration,
     formDetail,
     formSubmitted,
+    setFormSubmitted,
   };
 
   return <Register {...props} />;

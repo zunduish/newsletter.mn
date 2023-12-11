@@ -8,6 +8,7 @@ export default function Register({
   formSubmitted,
   formDetail,
   getFormValues,
+  setFormSubmitted,
 }: any) {
   const fields = formDetail?.fields || [];
   const [name, setName] = useState("");
@@ -16,9 +17,13 @@ export default function Register({
   const afterOpenModal = () => {};
   const [modalArticlesOpen, setModalArticlesOpen] = React.useState(false);
   const openModalArticles = () => {
+    setFormSubmitted(true);
     setModalArticlesOpen(true);
   };
-  const closeModalArticles = () => setModalArticlesOpen(false);
+  const closeModalArticles = () => {
+    location.reload();
+    // setModalArticlesOpen(false);
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -76,7 +81,7 @@ export default function Register({
           </div>
         </form>
       ) : (
-        "submitted"
+        <p className="text-[14px] text-default-green mt-[10px]">Тавтай морил</p>
       )}
 
       {/* ************************************************************************************************************ */}
@@ -92,7 +97,7 @@ export default function Register({
           <div className="py-4 ">
             <div className="w-full mb-3 py-1 grid justify-items-center text-center">
               <Image
-                src={"./images/sys_images/success.svg"}
+                src={"../../images/sys_images/success.svg"}
                 alt=""
                 width={50}
                 height={50}
