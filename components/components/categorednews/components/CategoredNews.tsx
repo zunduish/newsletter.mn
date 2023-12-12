@@ -16,9 +16,11 @@ export default function CategoredNews(props: Props) {
   const [modalArticlesOpen, setModalArticlesOpen] = React.useState(false);
   const [modalTitle, setModalTitle] = useState();
   const [modalDesc, setModalDesc] = useState();
-  const openModalArticles = (title: any, desc: any) => {
+  const [modalImage, setModalImage] = useState();
+  const openModalArticles = (title: any, desc: any, backgroundImage: any) => {
     setModalTitle(title);
     setModalDesc(desc);
+    setModalImage(backgroundImage);
     setModalArticlesOpen(true);
   };
   const closeModalArticles = () => setModalArticlesOpen(false);
@@ -125,7 +127,11 @@ export default function CategoredNews(props: Props) {
                 </Link>
                 <button
                   onClick={() => {
-                    openModalArticles(element.title, element.description);
+                    openModalArticles(
+                      element.title,
+                      element.description,
+                      element.backgroundImage
+                    );
                   }}
                   className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
                 >
@@ -154,11 +160,15 @@ export default function CategoredNews(props: Props) {
             <div className="py-4 ">
               <div className="w-full mb-3 py-1 grid justify-items-center text-center">
                 <Image
-                  src={"./images/card_pic1.svg"}
+                  src={
+                    modalImage !== null
+                      ? ErxesImageUrl + modalImage
+                      : "./images/sys_images/default.svg"
+                  }
                   alt=""
                   width={50}
                   height={50}
-                  className="rounded-lg w-[50%]"
+                  className="rounded-lg w-[40%]"
                 />
                 <p className="text-xl  mt-[20px] text-[16px] md:text-[24px] lg:text-[28px] font-bold">
                   {modalTitle}
