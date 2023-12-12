@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Modal from "react-modal";
 import { ErxesImageUrl } from "@/utils";
+import RegisterContainer from "../../register/container/RegisterContainer";
 
 type Props = {
   title: string;
@@ -10,11 +11,19 @@ type Props = {
 
 export default function CategoredNCooperation(props: Props) {
   const { title, listData } = props;
-
   const afterOpenModal = () => {};
   const [modalArticlesOpen, setModalArticlesOpen] = React.useState(false);
-  const openModalArticles = () => setModalArticlesOpen(true);
   const closeModalArticles = () => setModalArticlesOpen(false);
+  const [modalTitle, setModalTitle] = useState();
+  const [modalDesc, setModalDesc] = useState();
+  const [modalImage, setModalImage] = useState();
+  const openModalArticles = (title: any, desc: any, backgroundImage: any) => {
+    setModalTitle(title);
+    setModalDesc(desc);
+    setModalImage(backgroundImage);
+    setModalArticlesOpen(true);
+  };
+  console.log("listData >>> ", listData);
   return (
     <div className="w-full px-[24px] mt-[15px]">
       <p className="subheading mb-[24px]">{title}</p>
@@ -33,7 +42,11 @@ export default function CategoredNCooperation(props: Props) {
                   </span>
                 </div>
                 <Image
-                  src={ErxesImageUrl + element.backgroundImage}
+                  src={
+                    element.backgroundImage !== null
+                      ? ErxesImageUrl + element.backgroundImage
+                      : "./images/sys_images/default.svg"
+                  }
                   sizes="100vw"
                   style={{
                     objectFit: "cover",
@@ -61,7 +74,14 @@ export default function CategoredNCooperation(props: Props) {
                   бүх дугаар
                 </p>
                 <button
-                  onClick={openModalArticles}
+                  // btn 1
+                  onClick={() => {
+                    openModalArticles(
+                      element.title,
+                      element.description,
+                      element.backgroundImage
+                    );
+                  }}
                   className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
                 >
                   <Image
@@ -113,7 +133,7 @@ export default function CategoredNCooperation(props: Props) {
                   хүсэлт илгээх
                 </p>
                 <button
-                  onClick={openModalArticles}
+                  // onClick={openModalArticles}
                   className="right-[0px] bottom-[-5px] lg:right-[10px] lg:bottom-[10px] absolute"
                 >
                   <Image
@@ -130,6 +150,50 @@ export default function CategoredNCooperation(props: Props) {
         </div>
         {/* linear bg */}
       </div>
+
+      {/* ************************************************************************************************************ */}
+      <Modal
+        isOpen={modalArticlesOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModalArticles}
+        appElement={[]}
+        contentLabel="Example Modal"
+        className="w-[95%] md:w-[600px] lg:w-[600px] min-h-[200px] max-h-[90%] px-[10px] md:px-[50px] lg:px-[100px] bg-white py-[20px] md:py-[30px] lg:py-[50px] flex absolute left-[5%] right-[5%] md:left-[10%] md:right-[10%] lg:left-[15%] lg:right-[15%]  mt-[30px] mb-[30px] bg-neutral-0 rounded-2xl"
+      >
+        <div className="relative min-h-[150px] overflow-scroll overflow_scroll_container w-full ">
+          <div className="py-4 ">
+            <div className="w-full mb-3 py-1 grid justify-items-center text-center">
+              <Image
+                src={
+                  modalImage !== null
+                    ? ErxesImageUrl + modalImage
+                    : "./images/sys_images/default.svg"
+                }
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  width: "40%",
+                  height: "100%",
+                }}
+                width={100}
+                height={100}
+                alt=""
+                className="rounded-lg"
+              />
+              <p className="text-xl  mt-[20px] text-[16px] md:text-[24px] lg:text-[28px] font-bold">
+                {modalTitle}
+              </p>
+              <p className="text-[14px] md:text-[16px] lg:text-[16px]  mt-[10px]">
+                {modalDesc}
+              </p>
+            </div>
+            <div className="w-full mt-[30px]">
+              <RegisterContainer />
+            </div>
+          </div>
+        </div>
+      </Modal>
+      {/*         
       <Modal
         isOpen={modalArticlesOpen}
         onAfterOpen={afterOpenModal}
@@ -150,7 +214,7 @@ export default function CategoredNCooperation(props: Props) {
             </div>
           </div>
         </div>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }
