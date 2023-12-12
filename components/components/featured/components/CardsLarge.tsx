@@ -38,7 +38,7 @@ export default function CardsLarge(props: Props) {
               <p className="text-neutral-300 text-[10px] uppercase font-black leading-4">
                 {/* Ер нь? */}#{index + 1}
               </p>
-              <p className="ontslox_dugaar_title text-neutral-900 mb-1 line-clamp-1">
+              <p className="ontslox_dugaar_title text-neutral-900 mb-1 line-clamp-1 ">
                 {element.title}
               </p>
               <div className="text-neutral-600 caption mb-1">

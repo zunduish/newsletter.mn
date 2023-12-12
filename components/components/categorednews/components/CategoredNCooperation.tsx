@@ -23,7 +23,6 @@ export default function CategoredNCooperation(props: Props) {
     setModalImage(backgroundImage);
     setModalArticlesOpen(true);
   };
-  console.log("listData >>> ", listData);
   return (
     <div className="w-full px-[24px] mt-[15px]">
       <p className="subheading mb-[24px]">{title}</p>

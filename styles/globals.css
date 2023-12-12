@@ -7,61 +7,23 @@
   src: url("../public/fonts/Literata/Literata-VariableFont_opsz\,wght.ttf"); /*URL to font*/
 }
 
+/* @font-face {
+  font-family: "GroteskyNormal";
+  src: url("/fonts/your-font-file.otf") format("opentype");
+} */
+
 @font-face {
-  font-family: "OktaNeue";
-  src: url("../public/fonts/OktaNeue/Groteskly Yours - Okta Neue Normal.otf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "GroteskyNormal";
+  src: url("../public/fonts/OktaNeue/normal.otf");
 }
-/*===============================================================================================*/
-/*===============================================================================================*/
-/*===============================================================================================*/
-
-/* Fira Sans Regular */
 @font-face {
-  font-family: "OktaNeue";
-  src: url("../public/fonts/OktaNeue/Groteskly Yours - Okta Neue Bold.otf")
-    format("embedded-opentype");
-  font-weight: bold;
-  font-style: normal;
+  font-family: "GroteskyBold";
+  src: url("/fonts/OktaNeue/Bold.otf") format("opentype");
 }
-
-/* @font-face {
-  font-family: "OktaNeue";
-  src: url("fonts/fira/eot/FiraSans-Italic.eot");
-  src: url("fonts/fira/eot/FiraSans-Italic.eot") format("embedded-opentype"),
-    url("fonts/fira/woff2/FiraSans-Italic.woff2") format("woff2"),
-    url("fonts/fira/woff/FiraSans-Italic.woff") format("woff"),
-    url("fonts/fira/woff2/FiraSans-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-} */
-
-/* Fira Sans Bold */
-/* @font-face {
-  font-family: "OktaNeue";
-  src: url("fonts/fira/eot/FiraSans-Bold.eot");
-  src: url("fonts/fira/eot/FiraSans-Bold.eot") format("embedded-opentype"),
-    url("fonts/fira/woff2/FiraSans-Bold.woff2") format("woff2"),
-    url("fonts/fira/woff/FiraSans-Bold.woff") format("woff"),
-    url("fonts/fira/woff2/FiraSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-} */
-
-/* @font-face {
-  font-family: "OktaNeue";
-  src: url("fonts/fira/eot/FiraSans-BoldItalic.eot");
-  src: url("fonts/fira/eot/FiraSans-BoldItalic.eot") format("embedded-opentype"),
-    url("fonts/fira/woff2/FiraSans-BoldItalic.woff2") format("woff2"),
-    url("fonts/fira/woff/FiraSans-BoldItalic.woff") format("woff"),
-    url("fonts/fira/woff2/FiraSans-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-} */
-/*===============================================================================================*/
-/*===============================================================================================*/
-/*===============================================================================================*/
+/* Additional styling if needed */
+body {
+  /* font-family: "GroteskyNormal", sans-serif; */
+}
 
 .ReactModal__Overlay {
   background-color: rgba(0, 0, 0, 0.7) !important;

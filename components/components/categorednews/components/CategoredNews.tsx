@@ -24,16 +24,13 @@ export default function CategoredNews(props: Props) {
     setModalArticlesOpen(true);
   };
   const closeModalArticles = () => setModalArticlesOpen(false);
-
-  // const router = useRouter();
-  // router.push("/feedback-detail/id123");
   const { title, listData } = props;
-  // console.log("listData > ", listData);
 
-  // console.log(process.env.NEXT_PUBLIC_ERXES_URL);
   return (
     <div className="w-full px-[24px] mt-[15px]">
-      <p className="subheading mb-[24px]">{title}</p>
+      <p className="subheading mb-[24px] font-GroteskyNormal font-bold">
+        {title}
+      </p>
       <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-[24px] pb-[50px] border-b-[1px] border-neutral-100">
         {/* ************************************************************************************************************ */}
         {listData?.map((element: any, index: number) => (
@@ -58,11 +55,6 @@ export default function CategoredNews(props: Props) {
                       ДОЛОО ХОНОГ БҮР
                     </span>
                   </div>
-                  {/* src={
-                  process.env.NEXT_PUBLIC_ERXES_URL +
-                  "/gateway/read-file?key=" +
-                  element.backgroundImage
-                } */}
                   <Image
                     src={
                       element.backgroundImage !== null
@@ -94,22 +86,12 @@ export default function CategoredNews(props: Props) {
                     : "/"
                 }
               >
-                <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
+                <p className="lg:text-[28px] md:text-[24px] sm:text-[20px]  font-bold text-neutral-900">
                   {element.title}
                 </p>
                 <div className="h-[180px] overflow-hidden">
                   <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
                     {element.description}
-                    <br />
-                    {/* <div className="w-full text-justify">
-                    <span className="text-sm ">
-                    {process.env.NEXT_PUBLIC_ERXES_URL}
-                    <br />
-                    {"/gateway/read-file?key="}
-                    <br />
-                    {element.backgroundImage}
-                    </span>
-                  </div> */}
                   </p>
                 </div>
               </Link>
