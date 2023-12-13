@@ -19,9 +19,6 @@ export default function Header() {
               alt=""
               className="ml-[10px] w-[250px]"
             />
-            {/* <span className="ml-3 font-bold "> UNREAD </span>
-          <span className="ml-1">|</span>
-          <span className="ml-1"> Newsletter</span> */}
           </div>
         </div>
       </div>

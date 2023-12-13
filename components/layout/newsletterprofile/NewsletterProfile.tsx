@@ -1,7 +1,7 @@
-import TheFutureTextContainer from "../../components/profile/thefuturetext/containers/TheFutureTextContainer";
-import NewContainer from "../../components/profile/new/containers/NewContainer";
-import ListContainer from "../../components/profile/lists/containers/ListContainer";
-import ProfileContainer from "../../components/profile/profile/containers/ProfileContainer";
+import TheFutureTextContainer from "../../profile/thefuturetext/containers/TheFutureTextContainer";
+import NewContainer from "../../profile/new/containers/NewContainer";
+import ListContainer from "../../profile/lists/containers/ListContainer";
+import ProfileContainer from "../../profile/profile/containers/ProfileContainer";
 
 type Props = {
   data: any;

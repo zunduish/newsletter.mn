@@ -1,7 +1,7 @@
 import { Router } from "next/router";
 import Image from "next/image";
 import { gql, useQuery } from "@apollo/client";
-import { GET_KNOWLEDGE_BASE_TOPICS_M } from "../../components/categorednews/graphql/queries";
+import { GET_KNOWLEDGE_BASE_TOPICS_M } from "../../categorednews/graphql/queries";
 import { getErxesApolloClient } from "@/lib/initApollo";
 import Loader from "@/components/common/Loader";
 import Link from "next/link";
