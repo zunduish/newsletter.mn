@@ -86,11 +86,11 @@ export default function CategoredNews(props: Props) {
                     : "/"
                 }
               >
-                <p className="lg:text-[28px] md:text-[24px] sm:text-[20px]  font-bold text-neutral-900">
+                <p className="lg:text-[28px] md:text-[24px] sm:text-[20px]  font-bold text-neutral-900 font-Literata">
                   {element.title}
                 </p>
                 <div className="h-[180px] overflow-hidden">
-                  <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
+                  <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-light lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
                     {element.description}
                   </p>
                 </div>

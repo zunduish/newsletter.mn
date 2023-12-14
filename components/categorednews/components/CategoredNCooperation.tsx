@@ -60,11 +60,11 @@ export default function CategoredNCooperation(props: Props) {
               </div>
             </div>
             <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-              <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
+              <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
                 {element.title}
               </p>
               <div className="h-[180px] overflow-hidden">
-                <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
+                <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900 font-light">
                   {element.description}
                 </p>
               </div>
@@ -118,11 +118,11 @@ export default function CategoredNCooperation(props: Props) {
               </div>
             </div>
             <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-              <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
+              <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
                 Товхимол бичих үү?
               </p>
               <div className="h-[180px] overflow-hidden">
-                <p className=" lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900 ">
+                <p className=" lg:text-[16px] md:text-[16px] sm:text-[14px] lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900 font-light">
                   Гүнзгий судалж мэдсэн сэдвээ бусадтай хуваалцахыг хүсвэл
                   бидэнтэй нэгдэж цахим товхимол бүтээгээрэй.
                 </p>

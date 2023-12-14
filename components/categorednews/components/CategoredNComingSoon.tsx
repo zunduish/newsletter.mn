@@ -32,14 +32,12 @@ export default function CategoredNComingSoon(props: Props) {
             </div>
           </div>
           <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
-              Dataduran
+            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
+              Food
             </p>
             <div className="h-[180px] overflow-hidden">
-              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
-                Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
-                facilisis. Arcu diam condimentum diam libero ac aliquam
-                scelerisque sed.
+              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900 font-light">
+                Ходоод хонхолзуулах хоолны товхимол.
               </p>
             </div>
             <div className="w-full flex ">
@@ -78,11 +76,11 @@ export default function CategoredNComingSoon(props: Props) {
             </div>
           </div>
           <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
-              Dataduran
+            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
+              Book
             </p>
             <div className="h-[180px] overflow-hidden">
-              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
+              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px]  font-light lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
                 Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
                 facilisis. Arcu diam condimentum diam libero ac aliquam
                 scelerisque sed.
@@ -123,14 +121,12 @@ export default function CategoredNComingSoon(props: Props) {
             </div>
           </div>
           <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
-              Dataduran
+            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
+              Teenagers
             </p>
             <div className="h-[180px] overflow-hidden">
-              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
-                Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
-                facilisis. Arcu diam condimentum diam libero ac aliquam
-                scelerisque sed.
+              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px]  font-light lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
+                Том хүн болох нь: 101
               </p>
             </div>
             <div className="w-full flex ">
@@ -168,11 +164,11 @@ export default function CategoredNComingSoon(props: Props) {
             </div>
           </div>
           <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
-              Dataduran
+            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
+              HR
             </p>
             <div className="h-[180px] overflow-hidden">
-              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
+              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-light lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
                 Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
                 facilisis. Arcu diam condimentum diam libero ac aliquam
                 scelerisque sed.
@@ -213,11 +209,11 @@ export default function CategoredNComingSoon(props: Props) {
             </div>
           </div>
           <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
-              Dataduran
+            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
+              Personal Finance
             </p>
             <div className="h-[180px] overflow-hidden">
-              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
+              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-light lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
                 Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
                 facilisis. Arcu diam condimentum diam libero ac aliquam
                 scelerisque sed.
@@ -258,14 +254,12 @@ export default function CategoredNComingSoon(props: Props) {
             </div>
           </div>
           <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
-              Dataduran
+            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
+              Personal Finance
             </p>
             <div className="h-[180px] overflow-hidden">
-              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
-                Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
-                facilisis. Arcu diam condimentum diam libero ac aliquam
-                scelerisque sed.
+              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-light lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
+                Маркетинг гэж энийг л хэлдэг юм байна.
               </p>
             </div>
             <div className="w-full flex ">
@@ -303,14 +297,12 @@ export default function CategoredNComingSoon(props: Props) {
             </div>
           </div>
           <div className="pl-3 lg:px-3 lg:pb-[20px] h-[290px] w-full relative">
-            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900">
-              Dataduran
+            <p className="lg:text-[28px] md:text-[24px] sm:text-[20px] font-bold text-neutral-900 font-Literata">
+              This Week in Mongolia
             </p>
             <div className="h-[180px] overflow-hidden">
-              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-normal lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
-                Lorem ipsum dolor sit amet consectetur. Quis non nibh arcu arcu
-                facilisis. Arcu diam condimentum diam libero ac aliquam
-                scelerisque sed.
+              <p className="lg:text-[16px] md:text-[16px] sm:text-[14px] font-light lg:leading-[20px] md:leading-[20px] sm:leading-[18px] text-neutral-900">
+                Монголд юу болж өнгөрөв?
               </p>
             </div>
             <div className="w-full flex ">
