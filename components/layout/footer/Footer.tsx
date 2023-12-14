@@ -19,10 +19,10 @@ export default function Footer() {
     <div className="w-full mt-[50px] bg-neutral-100">
       <div className="container_custom  lg:container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-0">
         <div className=" lg:col-span-4 p-[24px]">
-          <p className="font-bold text-[20px] leading-[29px] md:text-[24px] md:leading-[35px] lg:text-[24px] lg:leading-[35px]">
+          <p className="font-bold text-[20px] leading-[29px] md:text-[24px] md:leading-[35px] lg:text-[24px] lg:leading-[35px] font-Literata">
             Newsletters by Unread
           </p>
-          <p className="mt-3 text-[12px] leading-[16px] md:text-[14px] md:leading-[18px] lg:text-[14px] lg:leading-[18px] ">
+          <p className="mt-3 text-[12px] leading-[16px] md:text-[14px] md:leading-[18px] lg:text-[14px] lg:leading-[18px] font-light">
             © 2015-2023 Анрид Медиа ХХК. Бүх эрх хуулиар хамгаалагдсан.
             Контентуудыг зөвшөөрөлгүйгээр болон дурдалгүйгээр нийтлэх, хэвлэх,
             эш татахыг хориглоно.

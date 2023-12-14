@@ -49,11 +49,11 @@ export default function NewProfile(props: Props) {
               {dayjs(list_data[0]?.createdDate).format("YYYY-MM-DD")} &#x2022;
               #1
             </p>
-            <p className="text-[20px] md:text-[24px] leading-[29px] md:leading-[35px] font-bold mt-2">
+            <p className="text-[20px] md:text-[24px] leading-[29px] md:leading-[35px] font-bold mt-2 font-Literata">
               {list_data[0]?.title}
             </p>
             <div
-              className="text-gray-soft mt-3 line-clamp-6"
+              className="text-gray-soft mt-3 line-clamp-6 font-light"
               dangerouslySetInnerHTML={{
                 __html: list_data[0]?.content,
               }}

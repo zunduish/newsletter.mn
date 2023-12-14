@@ -40,14 +40,14 @@ export default function Lists(props: Props) {
                   <div className="lg:pl-[20px] w-full mt-[10px] lg:mt-0">
                     <p className="text-orange-200 font-black text-[10px] leading-[16px]">
                       {/* {element.createdDate}  */}
-                      {dayjs(element.createdDate).format("YYYY-MM-DD")} #
+                      {dayjs(element.createdDate).format("YYYY/MM/DD")} #
                       {index + 1}
                     </p>
-                    <p className="font-bold text-[16px] leading-[23px]  mt-1 line-clamp-2">
+                    <p className="font-bold text-[16px] leading-[23px] mt-1 line-clamp-2 font-Literata">
                       {element.title}
                     </p>
                     <div
-                      className="text-gray-soft mt-3 line-clamp-2 text-[14px]"
+                      className="text-gray-soft mt-3 line-clamp-2 text-[14px] font-light"
                       dangerouslySetInnerHTML={{
                         __html: element.content,
                       }}

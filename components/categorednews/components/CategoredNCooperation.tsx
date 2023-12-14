@@ -179,10 +179,10 @@ export default function CategoredNCooperation(props: Props) {
                 alt=""
                 className="rounded-lg"
               />
-              <p className="text-xl  mt-[20px] text-[16px] md:text-[24px] lg:text-[28px] font-bold">
+              <p className="text-xl  mt-[20px] text-[16px] md:text-[24px] lg:text-[28px] font-bold font-Literata">
                 {modalTitle}
               </p>
-              <p className="text-[14px] md:text-[16px] lg:text-[16px]  mt-[10px]">
+              <p className="text-[14px] md:text-[16px] lg:text-[16px] mt-[10px] font-light">
                 {modalDesc}
               </p>
             </div>

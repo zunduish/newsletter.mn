@@ -28,17 +28,16 @@ export default function Profile(props: Props) {
               ? ErxesImageUrl + cat_data?.backgroundImage
               : "../images/sys_images/default.svg"
           }
-          // src="/images/rocket.png"
           width={76}
           height={76}
           alt=""
           className="w-[76px] h-[76px] sm:m-auto md:m-0 lg:m-0 rounded-lg"
         />
       </div>
-      <p className="text-[16px] leading-[23px] font-bold mt-4">
+      <p className="text-[16px] leading-[23px] font-bold mt-4 font-Literata">
         {cat_data?.title}
       </p>
-      <p className="text-[12px] leading-[16px] font-normal text-neutral-500 mt-2">
+      <p className="text-[12px] leading-[16px] font-light text-neutral-500 mt-2">
         {cat_data?.description}
       </p>
 
