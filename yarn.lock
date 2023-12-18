@@ -128,7 +128,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/next-on-pages@npm:^1.8.1":
+"@cloudflare/next-on-pages@npm:^1.8.2":
   version: 1.8.2
   resolution: "@cloudflare/next-on-pages@npm:1.8.2"
   dependencies:
@@ -975,7 +975,7 @@ __metadata:
   resolution: "apu-speakup@workspace:."
   dependencies:
     "@apollo/client": ^3.8.5
-    "@cloudflare/next-on-pages": ^1.8.1
+    "@cloudflare/next-on-pages": ^1.8.2
     "@tailwindcss/line-clamp": ^0.4.4
     "@types/node": ^20
     "@types/react": ^18
