@@ -49,29 +49,33 @@ export default function Footer() {
                 </Link>
               )
             )}
-            {/* ер нь? &#x2022; the future &#x2022; techworm weekly &#x2022; wheels
-            on &#x2022; 5 талх, 2 загас &#x2022; долоо хоногийн тойм &#x2022;
-            rest of mongolia &#x2022; this week in mongolia &#x2022; the Balance
-            &#x2022; battery saver &#x2022; sdg 2030 &#x2022; sportworm &#x2022;
-            Travel &#x2022; Тасалбар &#x2022; pop culture data duran &#x2022;
-            krypto &#x2022; тун удахгүй */}
           </p>
           {/* fb insta twitter */}
           <div className="w-full flex items-center">
-            <Image
-              src="/images/sys_images/fb_logo.svg"
-              width={22}
-              height={22}
-              alt=""
-              className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
-            />
-            <Image
-              src="/images/sys_images/insta_logo.svg"
-              width={22}
-              height={22}
-              alt=""
-              className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
-            />
+            <Link
+              href={"https://www.facebook.com/profile.php?id=61554731702368"}
+              target="_blank"
+            >
+              <Image
+                src="/images/sys_images/fb_logo.svg"
+                width={22}
+                height={22}
+                alt=""
+                className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
+              />
+            </Link>
+            <Link
+              href={"https://www.instagram.com/newsletter.mn/?next=%2F"}
+              target="_blank"
+            >
+              <Image
+                src="/images/sys_images/insta_logo.svg"
+                width={22}
+                height={22}
+                alt=""
+                className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
+              />
+            </Link>
             <Image
               src="/images/sys_images/twitter_logo.svg"
               width={22}
