@@ -76,13 +76,15 @@ export default function Footer() {
                 className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
               />
             </Link>
-            <Image
-              src="/images/sys_images/twitter_logo.svg"
-              width={22}
-              height={22}
-              alt=""
-              className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
-            />
+            <Link href={"/"} target="_blank">
+              <Image
+                src="/images/sys_images/twitter_logo.svg"
+                width={22}
+                height={22}
+                alt=""
+                className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] lg:w-[22px] lg:h-[22px] mr-[16px]"
+              />
+            </Link>
             <button className="flex px-[14px] py-[3px] items-center border border-neutral-200 rounded-full">
               <span className="mr-[5px] font-bold text-[12px] leading-[20px] md:text-[14px] md:leading-[24px] lg:text-[14px] lg:leading-[24px] ">
                 UNREAD.TODAY{" "}
