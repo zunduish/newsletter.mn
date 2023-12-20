@@ -1,6 +1,6 @@
-import Header from "../../components/layout/header/Header";
-import NewsletterProfile from "../../components/layout/newsletterProfile/NewsletterProfile";
-import Footer from "../../components/layout/footer/Footer";
+import Header from "@/components/layout/header/Header";
+import NewsletterProfile from "@/components/layout/newsletterProfile/NewsletterProfile";
+import Footer from "@/components/layout/footer/Footer";
 import { useRouter } from "next/router";
 import { gql, useQuery } from "@apollo/client";
 import { getErxesApolloClient } from "@/lib/initApollo";
